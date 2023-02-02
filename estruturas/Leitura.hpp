@@ -3,6 +3,8 @@
 #include "Dadosbase.hpp"
 using namespace std;
 
+void clearVetor(double Vetor[], int tam);
+
 void lerDadosBase(){
 	string name = "";
 	printf("%s \n","Insira o nome do arquivo: ");
@@ -16,6 +18,7 @@ void lerDadosBase(){
 	}else{
 		int mestreMandou = 0;
 		string var[10]; // base da tabela
+		double nodes[9]; //nodes
 		string palavra = "";
 		string palavraVariante = "";
 		int i=0;
@@ -25,7 +28,7 @@ void lerDadosBase(){
 					getline(arquivo,palavra);
 					if(palavra != "NODES"){
 						var[i] = palavra;
-						// cout<<i<<endl;
+						 cout<<var[i]<<endl;
 					}else{
 						mestreMandou++;
 						base = new Dadosbase(var[0],var[1],var[2],var[3],var[4],var[5],var[6],var[7],var[8],var[9]);
@@ -34,35 +37,31 @@ void lerDadosBase(){
 					palavra.clear(); //funfando
 					break;
 				case 1:
-					for(unsigned int j=0; j<base->getSize(); j++){
-						getline(arquivo,palavra);
+					double pegaDados;
+					for(int j=0; j<base->getSize(); j++){
 						i=0;
-						int k = 0;
-						while(i<sizeof(palavra)){
-							if(' ' == palavra[i] || '\n' == palavra[i]){
-								 var[k] = palavraVariante;
-							}else{
-								palavraVariante += palavra[i];
-							}
+						while(i<9){
+							arquivo >> pegaDados;
+							nodes[i]= pegaDados;
 							i++;
-							palavra.clear();
 						}
-					//  registra onde vc quiser
-						clearVetor(var);
+						palavra.clear();
+						clearVetor(nodes, i);
 					}
+					//No = new Nodes(nodes[0],nodes[1],nodes[2],nodes[3],nodes[4],nodes[5],nodes[6],nodes[7],nodes[8])
 					mestreMandou++;
 					break;
+					
 				case 2:
 					mestreMandou++;
-				default:
 					break;
 			}
 		}
 	}
 }
 
-void clearVetor(string vetor[]){
-	for(int i=0; i<sizeof(vetor); i++){
-		vetor[i]="";
+void clearVetor(double vetor[], int tam){
+	for(int i=0; i<tam; i++){
+		vetor[i]=0.0;
 	}
 }
