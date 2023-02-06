@@ -1,3 +1,6 @@
+Durante a pandemia, a demanda por serviços logísticos cresceu em virtude do aumento de compras online (Fonte: “Logística cresce na pandemia com aumento de compras pela internet”, por Paula Monteiro, em Pequenas Empresas & Grandes Negócios). Grandes empresas que realizam suas operações de entregas de produtos buscam sempre uma redução de custos logísticos, a fim de utilizar tal economia de recursos em outros investimentos de interesse corporativo.
+Foi proposto portanto que realizemos uma solução em formato de código programável, o qual com uma base de dados em arquivo de formato texto sobre uma região com os custos para desloque( tempo, distância, preço )  deveria definir o menor caminho possível entre pontos distintos.
+
 # Trabalho-grafos
 Repositório destinado ao trabalho final da disciplina de algoritmo em grafos da Universidade Federal de Lavras - Alunos: Caio Almeida Santos &amp; Julio Henrique Oliveira Mariano.
 
@@ -18,14 +21,14 @@ buscam sempre uma redução de custos logísticos, a fim de utilizar tal economi
 	
 
 
-Tendo a base de dados completa a partir de um dados de origem dado seria aplicado o algoritmo de dijkstra em primeira instancia:
+Tendo a base de dados completa a partir de um dados de origem dado seria aplicado o algoritmo de dijkstra em primeira instância:
 
 
-      Realiza algortimo de dijkstra para primeira solução
-        	Avalia se a primeira restrição e cumprida, caso não aplicaria-se o algoritmo de Floyd-warsha.
-         		Caso sim avalia-se se a segunda obdece-> caso não haveria a quebra do grafo no ponto não obdecido e aplicaria-se apartir deste o algoritmo de dijkstra novamente.
-  			somando com a primeira parte -> reaavalia se não obdecer muda de algortimo.
-         			Se obdecer continua respectivamente...
+      Realiza algoritmo de dijkstra para primeira solução
+        	Avalia se a primeira restrição é cumprida, caso não seja aplicado o algoritmo de Floyd-warshall.
+         		Caso sim, avalia-se se a segunda obedece-> caso não haveria a quebra do grafo no ponto não obedecido e aplicaria-se a partir deste o algoritmo de dijkstra novamente.
+  			somando com a primeira parte -> reavalia se não obedecer muda de algoritmo.
+         			Se obedecer contínua respectivamente...
           
 	  
          Essa avaliação ocorreria assim:
@@ -33,12 +36,7 @@ Tendo a base de dados completa a partir de um dados de origem dado seria aplicad
                   Caso sim retorna true, caso não retornaria false
 		  
 		  
-Já a solução aleatoria foi feita:
+Já a solução aleatória foi feita:
 	
 	
 	continua...
-                    
-          
-       
-    
-  
