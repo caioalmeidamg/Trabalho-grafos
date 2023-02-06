@@ -1,15 +1,11 @@
 Durante a pandemia, a demanda por serviços logísticos cresceu em virtude do aumento de compras online (Fonte: “Logística cresce na pandemia com aumento de compras pela internet”, por Paula Monteiro, em Pequenas Empresas & Grandes Negócios). Grandes empresas que realizam suas operações de entregas de produtos buscam sempre uma redução de custos logísticos, a fim de utilizar tal economia de recursos em outros investimentos de interesse corporativo.
-Foi proposto portanto que realizemos uma solução em formato de código programável, o qual com uma base de dados em arquivo de formato texto sobre uma região com os custos para desloque( tempo, distância, preço )  deveria definir o menor caminho possível entre pontos distintos.
+
 
 # Trabalho-grafos
 Repositório destinado ao trabalho final da disciplina de algoritmo em grafos da Universidade Federal de Lavras - Alunos: Caio Almeida Santos &amp; Julio Henrique Oliveira Mariano.
 
+Foi proposto portanto que realizemos uma solução em formato de código programável, o qual com uma base de dados em arquivo de formato texto sobre uma região com os custos para desloque( tempo, distância, preço )  deveria definir o menor caminho possível entre pontos distintos.
 
-Durante a pandemia, a demanda por serviços logísticos cresceu em virtude do aumento de compras online (Fonte: “Logística cresce na pandemia com aumento de 
-compras pela internet”, por Paula Monteiro,em Pequenas Empresas & Grandes Negócios). Grandes empresas que realizam suas operações de entregas de produtos 
-buscam sempre uma redução de custos logísticos, a fim de utilizar tal economia de recursos em outros investimentos de interesse corporativo.
-    	Foi proposto portanto que realizemos uma solução em formato de código programável, o qual com uma base de dados em arquivo de formato texto sobre uma região com os custos para desloque
-(tempo, distância, preço) deveria definir o menor caminho possível entre pontos distintos.
 
 
 	Início Programa
