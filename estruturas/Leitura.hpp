@@ -8,7 +8,12 @@ estamos usando o "bar-n100-1.txt" pra testes.
 #include <iostream>
 #include <bits/stdc++.h>
 #include "Dadosbase.hpp"
+#include "DijkstraOficial.hpp"
 using namespace std;
+
+
+typedef list<pair<int, int> > LA;
+
 
 void clearVetor(double vetor[], int tam){
 	for(int i=0; i<tam; i++){
@@ -33,6 +38,7 @@ Dadosbase lerDadosBase(){
 		string palavra = "";
 		string palavraVariante = "";
 		int i=0;
+		int pesos;
 		while(!arquivo.eof()){//enquanto o arquivo não chegar ao fim
 			switch (mestreMandou){
 				case 0:
@@ -50,7 +56,7 @@ Dadosbase lerDadosBase(){
 					double pegaDados;
 					for(int j=0; j<base->getSize(); j++){
 						i=0;
-						while(i<sizeof(nodes)){
+						while(i<9){
 							arquivo >> pegaDados;
 							nodes[i] = pegaDados;
 							i++;
@@ -61,33 +67,34 @@ Dadosbase lerDadosBase(){
 					}
 					mestreMandou++;
 					break;
-					
 				case 2:
 					getline(arquivo,palavra);
-					vector<int> *LA = new vector<int>[base->getSize()];
-					for(int j=0; j<base->getSize(); j++)
-						for(int k=0; j<base->getSize(); k++){
-							arquivo >> i;
-							LA[i].push_back(i);
-							
+					getline(arquivo,palavra);
+					LA * adj = new LA[base->getSize()];
+
+					for(int j=0; j<base->getSize(); j++){
+						for(int k=0; k<base->getSize(); k++){
+							arquivo >> pesos;
+							adj[j].push_back(make_pair(k, pesos));
 						}
-					base->setLAA(LA);
+					}
+						
+					base->setLAA(adj);
 					mestreMandou++;
+					getline(arquivo,palavra);
 					getline(arquivo,palavra);
 					break;
 			}
 		}
-		arquivo.close();
-		printf("%s \n","Insira a quantidade de veiculos M(X1*): ");
+		printf("%s \n","Insira inicio de veiculos M(X1*): ");
 		int pontoI, capacidadeI;
 		cin>>pontoI;
-		printf("%s \n","Insira a custo C(X1*): ");
+		printf("%s \n","Insira fim C(X1*): ");
 		cin>>capacidadeI;
 
-		//analisarSolucao();
-
+		cout<<dijkstra(pontoI,capacidadeI,base->getSize(),base->getLA());
+		arquivo.close();
 		return *base;
 	}
 }
-
 
