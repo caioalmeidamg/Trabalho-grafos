@@ -33,7 +33,7 @@ Tendo a base de dados completa a partir de um dados de origem dado seria aplicad
                   Caso sim retorna true, caso não retornaria false
 		  
 		  
-	Já a solução aleatoria foi feita:
+Já a solução aleatoria foi feita:
 	
 	
 	continua...
