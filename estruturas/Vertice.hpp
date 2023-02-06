@@ -54,3 +54,20 @@ O <p> e <d> são apenas para fins de integridade. Em todas as instâncias, para 
 local de coleta <id> sua entrega é dada por (<id>+((SIZE-1)/2)). Para um local de
 entrega <id>, sua coleta é dada por (<id>-((SIZE-1)/2)).
 */
+
+int Vertice::getEntrega(){
+    return this->parDeEntrega;
+}
+
+int Vertice::getColeta(){
+    return this->parDeColeta;
+}
+
+Vertice::~Vertice(){
+}
+
+/*
+O <p> e <d> são apenas para fins de integridade. Em todas as instâncias, para um
+local de coleta <id> sua entrega é dada por (<id>+((SIZE-1)/2)). Para um local de
+entrega <id>, sua coleta é dada por (<id>-((SIZE-1)/2)).
+*/
