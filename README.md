@@ -1,5 +1,6 @@
 # Trabalho-grafos
-    Repositório destinado ao trabalho final da disciplina de algoritmo em grafos da Universidade Federal de Lavras - Alunos: Caio Almeida Santos &amp; Julio Henrique Oliveira Mariano.
+   Repositório destinado ao trabalho final da disciplina de algoritmo em grafos da Universidade Federal de Lavras - Alunos: Caio Almeida Santos &amp;Julio Henrique Oliveira Mariano.
+    
     Durante a pandemia, a demanda por serviços logísticos cresceu em virtude do aumento de compras online (Fonte: “Logística cresce na pandemia com aumento de 
 compras pela internet”, por Paula Monteiro,em Pequenas Empresas & Grandes Negócios). Grandes empresas que realizam suas operações de entregas de produtos 
 buscam sempre uma redução de custos logísticos, a fim de utilizar tal economia de recursos em outros investimentos de interesse corporativo.
