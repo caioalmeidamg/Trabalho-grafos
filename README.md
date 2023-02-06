@@ -16,12 +16,12 @@ Chamar a leitura dos dados -> avalia se arquivo existe
 			Registra os caminhos entre esses em um matriz vector ->
 	
 
-	Tendo a base de dados completa a partir de um dados de origem dado seria aplicado o algoritmo de dijkstra em primeira instancia
-      ->Realiza algortimo de dijkstra para primeira solução
-        ->Avalia se a primeira restrição e cumprida, caso não aplicaria-se o algoritmo de Floyd-warsha
-          Caso sim avalia-se se a segunda obdece-> caso não haveria a quebra do grafo no ponto não obdecido e aplicaria-se apartir deste o algoritmo de dijkstra novamente
-  somando com a primeira parte -> reaavalia se não obdecer muda de algortimo
-          Se obdecer continua respectivamente
+Tendo a base de dados completa a partir de um dados de origem dado seria aplicado o algoritmo de dijkstra em primeira instancia:
+      Realiza algortimo de dijkstra para primeira solução.
+        Avalia se a primeira restrição e cumprida, caso não aplicaria-se o algoritmo de Floyd-warsha.
+          Caso sim avalia-se se a segunda obdece-> caso não haveria a quebra do grafo no ponto não obdecido e aplicaria-se apartir deste o algoritmo de dijkstra novamente.
+  somando com a primeira parte -> reaavalia se não obdecer muda de algortimo.
+          Se obdecer continua respectivamente...
           
           Essa avaliação ocorreria assim:
                 Tendo uma solução percorreria o grafo solução avaliando se ele obedece ao tipo de restrição enviado
