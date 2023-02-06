@@ -31,6 +31,12 @@ Tendo a base de dados completa a partir de um dados de origem dado seria aplicad
          Essa avaliação ocorreria assim:
                 Tendo uma solução percorreria o grafo solução avaliando se ele obedece ao tipo de restrição enviado
                   Caso sim retorna true, caso não retornaria false
+		  
+		  
+	Já a solução aleatoria foi feita:
+	
+	
+	continua...
                     
           
        
