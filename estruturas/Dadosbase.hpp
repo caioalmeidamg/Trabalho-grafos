@@ -7,7 +7,7 @@ using namespace std;
 #ifndef Dadosbase_HPP
 #define Dadosbase_HPP
 typedef vector<Vertice> node;
-typedef vector<int> LA;
+typedef list<pair<int, int> > LA;
 
 class Dadosbase{
     private:
@@ -36,6 +36,7 @@ class Dadosbase{
         int getTimeWindow();
         string getDistribution();
         void setLAA(LA *V);
+        LA* getLA();
         void adicionarNode(Vertice no);
 };
 
@@ -117,6 +118,10 @@ class Dadosbase{
 
     void Dadosbase::setLAA(LA *v){
         edges = v; 
+    }
+
+    LA* Dadosbase::getLA(){
+        return edges;
     }
 
 #endif
