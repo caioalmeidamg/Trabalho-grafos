@@ -1,11 +1,22 @@
+/*Observações 
+- Esse arquivo tem como objetivo funções de leitura de dados de um arquivo genérico,
+estamos usando o "bar-n100-1.txt" pra testes.
+- A manipulação de dados ocorre na classe: "Dadosbase.hpp"
+- O encapsulamento foi deixado de lado durante a primeira entrega
+*/
+
 #include <iostream>
 #include <bits/stdc++.h>
 #include "Dadosbase.hpp"
 using namespace std;
 
-void clearVetor(double Vetor[], int tam);
+void clearVetor(double vetor[], int tam){
+	for(int i=0; i<tam; i++){
+		vetor[i]=0.0;
+	}
+}
 
-void lerDadosBase(){
+Dadosbase lerDadosBase(){
 	string name = "";
 	printf("%s \n","Insira o nome do arquivo: ");
 	cin>>name;
@@ -28,7 +39,6 @@ void lerDadosBase(){
 					getline(arquivo,palavra);
 					if(palavra != "NODES"){
 						var[i] = palavra;
-						 cout<<var[i]<<endl;
 					}else{
 						mestreMandou++;
 						base = new Dadosbase(var[0],var[1],var[2],var[3],var[4],var[5],var[6],var[7],var[8],var[9]);
@@ -40,28 +50,44 @@ void lerDadosBase(){
 					double pegaDados;
 					for(int j=0; j<base->getSize(); j++){
 						i=0;
-						while(i<9){
+						while(i<sizeof(nodes)){
 							arquivo >> pegaDados;
-							nodes[i]= pegaDados;
+							nodes[i] = pegaDados;
 							i++;
 						}
-						palavra.clear();
-						clearVetor(nodes, i);
+						Vertice ver(nodes[0],nodes[1],nodes[2],nodes[3],nodes[4],nodes[5],nodes[6],nodes[7],nodes[8]);
+						base->adicionarNode(ver);
+						clearVetor(nodes, 9);
 					}
-					//No = new Nodes(nodes[0],nodes[1],nodes[2],nodes[3],nodes[4],nodes[5],nodes[6],nodes[7],nodes[8])
 					mestreMandou++;
 					break;
 					
 				case 2:
+					getline(arquivo,palavra);
+					vector<int> *LA = new vector<int>[base->getSize()];
+					for(int j=0; j<base->getSize(); j++)
+						for(int k=0; j<base->getSize(); k++){
+							arquivo >> i;
+							LA[i].push_back(i);
+							
+						}
+					base->setLAA(LA);
 					mestreMandou++;
+					getline(arquivo,palavra);
 					break;
 			}
 		}
+		arquivo.close();
+		printf("%s \n","Insira a quantidade de veiculos M(X1*): ");
+		int pontoI, capacidadeI;
+		cin>>pontoI;
+		printf("%s \n","Insira a custo C(X1*): ");
+		cin>>capacidadeI;
+
+		//analisarSolucao();
+
+		return *base;
 	}
 }
 
-void clearVetor(double vetor[], int tam){
-	for(int i=0; i<tam; i++){
-		vetor[i]=0.0;
-	}
-}
+
